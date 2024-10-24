@@ -45,11 +45,16 @@ This measure calculates the average number of years that employees have been wit
 
 Avg Years at Company = AVERAGE(Employee[YearsAtCompany])
 
-### 2.3 Attrition Rate
+### 2.4 Overtime Employees
+This measure calculates the total number of employees who are working overtime.
 
-$$ Attrition Rate = 
-DIVIDE(
-    COUNTROWS(FILTER(Employee, Employee[Attrition] = "Yes")), 
-    COUNTROWS(Employee), 
-    0
-) $$
+**DAX Formula:**
+
+Overtime Employees = COUNTROWS(FILTER(Employee, Employee[OverTime] = "Yes"))
+
+### Using Calculated Columns and Measures in Visuals
+After creating calculated columns and measures, you can use them in any visualization such as:
+
+Tables: Display calculated fields like "Age Group" or "Bonus Eligibility."
+Charts: Use measures like "Total Salary" or "Attrition Rate" in a Card or Pie Chart for visual analysis.
+Slicers: Apply filters to analyze data dynamically based on fields like "Tenure Band" or "Overtime Employees."
