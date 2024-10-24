@@ -8,7 +8,7 @@ This calculated column categorizes employees into specific age groups: 20-30, 31
 ## DAX Formula:
 
 Age Group = 
-IF(Employee[Age] <= 30, "20-30", 
+IF(Employee[Age] <= 30, "20-30", <br>
 IF(Employee[Age] <= 40, "31-40", 
 IF(Employee[Age] <= 50, "41-50", "50+")))
 
